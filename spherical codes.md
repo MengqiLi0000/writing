@@ -1,5 +1,3 @@
-## The Geometry of a Crowded Sky
-
 ### Spherical codes, broadband constellations, and the point where more satellites stop buying much more coverage
 
 A broadband satellite constellation looks like a communications network, but its first constraint is geometric: **where can points moving on concentric spheres be placed so that every relevant point on Earth sees enough of them, often enough, at a high enough elevation angle?**
