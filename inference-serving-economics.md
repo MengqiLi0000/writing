@@ -839,7 +839,7 @@ GROUP BY workload
 ORDER BY avoidable_spend DESC;
 ```
 
-### What is actually measured vs. modeled
+### What is actually measured vs. What is modeled
 
 A serious serving report should keep these categories separate.
 
@@ -853,7 +853,7 @@ A serious serving report should keep these categories separate.
 
 This separation is important. It prevents a dashboard mock-up from quietly becoming “benchmark data.”
 
-### Why this becomes an economics system rather than a logging system
+### Why this becomes an economics system, not just a logging system
 
 The instrument exposes four different levers that are usually collapsed into one monthly number:
 
@@ -874,42 +874,6 @@ A provider can cut its token price and still become more expensive for the workl
 
 The request ledger makes those effects separable.
 
-### Repository layout
-
-```text
-inference-ledger/
-├── README.md
-├── src/
-│   ├── gateway/
-│   ├── telemetry/
-│   ├── pricing/
-│   ├── routing/
-│   └── reconciliation/
-├── schemas/
-│   ├── request_event.schema.json
-│   └── task_ledger.schema.json
-├── pricing/
-│   ├── openai.yaml
-│   ├── anthropic.yaml
-│   ├── google.yaml
-│   ├── xai.yaml
-│   └── deepseek.yaml
-├── analysis/
-│   ├── retry_breakeven.ipynb
-│   ├── cache_economics.ipynb
-│   ├── context_efficiency.ipynb
-│   └── serving_ablation.ipynb
-├── dashboards/
-│   └── serving-economics.json
-├── sql/
-│   ├── cost_regressions.sql
-│   ├── routing_regret.sql
-│   └── invoice_reconciliation.sql
-└── docs/
-    ├── methodology.md
-    ├── provider-normalization.md
-    └── experiments.md
-```
 
 ### Primary metrics
 
@@ -927,8 +891,6 @@ inference-ledger/
 | Long-context incidence | requests crossing provider price cliff | Detects avoidable tier jumps |
 
 ### Bottom line
-
-The unit of AI infrastructure is not the token. It is the **successful task**.
 
 A useful cost system therefore has to observe the entire path:
 
