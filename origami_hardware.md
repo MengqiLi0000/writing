@@ -38,17 +38,10 @@ A degree-4 vertex already shows the idea. Four creases meet at a point, dividing
 
 These are not decorative properties. They remove impossible mechanism designs before a motor, material, or controller is selected.
 
-<p align="center">
-  <img src="assets/degree4_vertex.svg" width="68%" alt="Degree-4 rigid origami vertex geometry">
-</p>
 
 A useful way to understand the same vertex is as a **spherical linkage**. Put an infinitesimal sphere around the vertex: each crease becomes a great-circle direction and the fold becomes a spherical four-bar mechanism. The physical hinges are still there, but their angles are coupled.
 
 That is why the **Miura fold** is mechanically interesting. JPL's 2014 overview put the advantage plainly: for a Miura pattern, pulling one corner can open the whole sheet, so only one input is needed for deployment. JPL also notes that Miura intended the pattern for solar arrays and that a Miura-based panel was deployed on the **Space Flyer Unit in 1995**. [JPL's history is here](https://www.jpl.nasa.gov/news/solar-power-origami-style/); JAXA also describes the SFU two-dimensional solar-array experiment in its [origami-in-space educational material](https://edu.jaxa.jp/activities/SEEC/material/assets/SEEC27-yo.pdf).
-
-<p align="center">
-  <img src="assets/miura_lattice.svg" width="78%" alt="Miura-ori lattice geometry">
-</p>
 
 This is the first point at which origami can replace hardware. If geometry enforces the coordination that would otherwise be implemented in software and actuators, the mechanism can trade **control complexity for geometric constraint**.
 
@@ -111,17 +104,11 @@ Classical origami assumes zero-thickness facets. Aerospace hardware does not.
 
 Give the panels even a few millimetres of thickness and the ideal crease axis becomes problematic: material from adjacent facets begins to overlap during rotation. The fold may be mathematically valid and mechanically impossible.
 
-<p align="center">
-  <img src="assets/thick_panel_collision.svg" width="90%" alt="Zero thickness and finite thickness hinge comparison">
-</p>
 
 This is the core problem addressed by **thick-panel origami**. Engineers use offset hinge axes, bevels, compliant hinges, split creases, material removal, and hybrid origami-kirigami layouts to recover a collision-free path.
 
-A particularly concrete example is the 2025 *Nature Communications* paper **“Thick-panel origami structures forming seamless surfaces”** by **Rui Peng and Gregory Chirikjian**. The paper is valuable because it does not stop at a foldability proof. It converts facets into rigid panels, creases into rotational joints, derives motion-compatibility conditions, removes interference around valley creases, and then fabricates physical prototypes. [Open-access paper](https://www.nature.com/articles/s41467-025-59141-2).
+An example is the 2025 *Nature Communications* paper **“Thick-panel origami structures forming seamless surfaces”** by **Rui Peng and Gregory Chirikjian**. The paper is valuable because it does not stop at a foldability proof. It converts facets into rigid panels, creases into rotational joints, derives motion-compatibility conditions, removes interference around valley creases, and then fabricates physical prototypes. [Open-access paper](https://www.nature.com/articles/s41467-025-59141-2).
 
-<p align="center">
-  <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41467-025-59141-2/MediaObjects/41467_2025_59141_Fig1_HTML.png" width="88%" alt="Nature Communications thick-panel origami structures">
-</p>
 
 <p align="center"><sub>Peng & Chirikjian, <i>Nature Communications</i> 16, 3881 (2025). Fully deployed and folded thick-panel structures, including seamless and curved-trajectory variants.</sub></p>
 
@@ -157,19 +144,10 @@ JPL's **Starshade** work shows how demanding the problem becomes when the deploy
 
 The full-scale concept tested at JPL corresponds to a **34 m diameter** starshade. Each petal is about **7 m long**. The petals must unfold around a **20 m central disk** and recover their positions to a fraction of a millimetre. JPL reports that across **20 deployments**, the test structure placed the petals within roughly **0.1 mm** of the correct location each time. [JPL Starshade laboratory summary](https://microdevices.jpl.nasa.gov/capabilities/optical-components/starshade/).
 
-<p align="center">
-  <img src="https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA20907.jpg" width="88%" alt="JPL starshade deployment sequence">
-</p>
-
-<p align="center"><sub>NASA/JPL-Caltech/Princeton. Half-scale starshade deployment sequence. The full-scale design represented by this test article is 34 m across. Source: <a href="https://www.jpl.nasa.gov/images/pia20907-starshade-deployment/">JPL Photojournal</a>.</sub></p>
-
 NASA's current technology-gap documentation is even more explicit. For a 34 m class system, it calls for petal deployment within an approximately **1 mm in-plane envelope** and petal-edge shape tolerances near **100 μm**. [NASA Exoplanet Exploration technology progress report](https://assets.science.nasa.gov/content/dam/science/astro/programs/exep/technology/files/Progress_in_Technology_for_Exoplanet_Missions.pdf).
 
 JPL's **Advanced Large Precision Structures Laboratory** describes the test scale another way: a **34 m aperture** that must stow into roughly a **4 m launch cylinder**. The same laboratory tests deployables from CubeSat-scale **50 cm apertures inside 10 × 20 × 30 cm spacecraft** up to Starshade class structures. [JPL ALPS Laboratory](https://www.jpl.nasa.gov/site/research/research-community/laboratories-facilities/advanced-large-precision-structures-alps-laboratory/).
 
-<p align="center">
-  <img src="assets/starshade_tolerance.svg" width="70%" alt="Starshade petal tolerance geometry">
-</p>
 
 The scale ratio is severe. A 34 m structure with 0.1 mm repeatability is operating across a length-scale ratio of roughly **340,000:1**.
 
@@ -199,9 +177,6 @@ A 2021 **origami continuum robot** by Junius Santoso and Cagdas Onal reported on
 
 A 2026 *Advanced Science* paper on the **Tri-WOB bistable origami structure** reported stiffness falling from **15.26 N/mm to 13.49 N/mm after 1,000 cycles** — an **11.6% reduction**. The authors attributed additional force degradation partly to increasing misalignment between opposing vertices. [Tri-WOB paper](https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.76898).
 
-<p align="center">
-  <img src="assets/fatigue_1000_cycles.svg" width="72%" alt="Published origami stiffness changes after 1000 cycles">
-</p>
 
 The chart should not be read as a head-to-head material comparison. The mechanisms and loading modes differ. That is precisely the point: **“origami” is not a material property**. Fold life belongs to a particular geometry-material-hinge system.
 
@@ -210,10 +185,6 @@ The chart should not be read as a head-to-head material comparison. The mechanis
 If a mechanism contains many independently critical folds, component reliability compounds.
 
 For illustration, if each of 40 critical hinges has **99.9%** probability of surviving the mission and failures are independent, system survival is only about **96.1%**.
-
-<p align="center">
-  <img src="assets/hinge_reliability.svg" width="72%" alt="System reliability versus critical hinge count">
-</p>
 
 This is one reason low-degree-of-freedom architectures are interesting even when they do not save much mass. Reducing the number of independent actuators, latches, or controlled states can remove failure opportunities.
 
@@ -334,7 +305,7 @@ Those are not origami numbers.
 
 They are hardware numbers.
 
-> **Origami becomes deployable engineering when the geometric constraint survives the conversion from ideal creases to real joints — and still creates a better mass, volume, precision, or reliability trade than the conventional mechanism it replaces.**
+> **Origami becomes deployable engineering when the geometric constraint survives the conversion from ideal creases to real joints, and still creates a better mass, volume, precision, or reliability trade than the conventional mechanism it replaces.**
 
 ### Sources and technical reading
 
