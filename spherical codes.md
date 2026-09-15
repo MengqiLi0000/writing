@@ -133,7 +133,7 @@ sets the separation between orbital planes in right ascension of ascending node,
 \frac{360^\circ}{S}
 ```
 
-sets in-plane spacing for \(S=T/P\) satellites per plane.
+sets in-plane spacing for \(S=T/P\) satellites per plane
 
 If \((\Omega,u)\) are treated as angular coordinates, the constellation looks less like points on a sphere and more like a **lattice on a torus**.
 
