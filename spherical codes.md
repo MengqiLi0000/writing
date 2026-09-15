@@ -29,9 +29,6 @@ Amazon's first-generation filing is unusually clean geometrically: **98 planes a
 
 OneWeb chooses the opposite end of the altitude trade. Eutelsat's current network uses **600+ satellites in 12 synchronized planes at 1,200 km**, with a near-polar geometry designed for truly global—including polar—coverage. [Eutelsat OneWeb constellation](https://www.eutelsat.com/satellite-network/oneweb-leo-constellation).
 
-<p align="center">
-  <img src="assets/constellation_architectures.svg" width="82%" alt="Starlink Amazon Leo OneWeb orbital architecture comparison">
-</p>
 
 The different counts are not simply different levels of ambition. They come from different choices about a basic spherical-cap problem.
 
@@ -71,10 +68,6 @@ A_{\mathrm{cap}}
 2\pi R_\oplus^2(1-\cos\psi).
 ```
 
-<p align="center">
-  <img src="assets/spherical_cap_geometry.svg" width="69%" alt="Satellite spherical cap coverage geometry">
-</p>
-
 That one equation explains much of the architectural difference between Starlink and OneWeb.
 
 Using the **same 25° minimum elevation mask only as a geometry benchmark**:
@@ -88,10 +81,6 @@ Using the **same 25° minimum elevation mask only as a geometry benchmark**:
 The final column is deliberately unrealistic. It is simply \(4\pi R^2/A_{\mathrm{cap}}\), as if spherical caps could tile Earth with no overlap and every sub-satellite point could be placed arbitrarily. Real constellations require far more satellites because they need continuous moving coverage, multiple visible spacecraft, finite beam capacity, handoff margin, restricted orbital inclinations, gateway access, redundancy, and service at useful elevation angles.
 
 Still, the table makes the first trade obvious: **higher altitude buys a much larger footprint**.
-
-<p align="center">
-  <img src="assets/footprint_vs_elevation.svg" width="78%" alt="Satellite footprint radius versus elevation angle">
-</p>
 
 The price is paid elsewhere.
 
@@ -137,9 +126,6 @@ sets in-plane spacing for \(S=T/P\) satellites per plane
 
 If \((\Omega,u)\) are treated as angular coordinates, the constellation looks less like points on a sphere and more like a **lattice on a torus**.
 
-<p align="center">
-  <img src="assets/walker_lattice.svg" width="79%" alt="Walker constellation lattice">
-</p>
 
 Starlink's first 550 km shell is a good concrete example: **72 planes × 22 satellites = 1,584 spacecraft**, inclined at **53°**. A purely in-plane angular spacing is therefore about
 
@@ -180,9 +166,6 @@ p(\phi)
 
 The spacecraft spends relatively more angular time near the turning latitudes of its ground track.
 
-<p align="center">
-  <img src="assets/latitude_density.svg" width="80%" alt="Latitude residence density by orbital inclination">
-</p>
 
 That makes the shell inclination an economic design variable.
 
