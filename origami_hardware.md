@@ -1,4 +1,4 @@
-## When Geometry Becomes Hardware
+## Geometry Becomes Hardware
 
 ### Origami mathematics is moving from foldability proofs to flight hardware
 
