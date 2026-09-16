@@ -192,7 +192,7 @@ Every model call becomes one row in an immutable serving ledger.
 }
 ```
 
-The numbers above are a **schema example**, not a benchmark observation. In production the provider response, price table version, and billing tier are stored with the event so the cost can be reproduced later.
+The numbers above are a **schema example**.
 
 ### Token accounting: input is not one thing
 
