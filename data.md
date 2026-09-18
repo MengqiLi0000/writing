@@ -1,3 +1,126 @@
+# Primary Interests
+
+Focus: **machine learning theory, nonparametric statistics, model training, and data systems**.
+
+Settings where standard Euclidean / i.i.d. assumptions are weak: high-dimensional function estimation, structured dependence, irregular geometry, spatial processes, sequences, graphs, and distribution shift
+
+## Nonparametric Statistics / ML Theory
+
+Some topics:
+
+`kernel methods` · `RKHS` · `local polynomial regression` · `splines / GAMs` · `Gaussian processes` · `quantile regression` · `sieve estimation` · `regularized inverse problems` · `bootstrap / uniform inference`
+
+Useful references:
+
+* [Kernel Ridge Regression](https://scikit-learn.org/stable/modules/kernel_ridge.html) — regularized estimation in RKHS.
+* [Gaussian Processes](https://scikit-learn.org/stable/modules/gaussian_process.html) — function estimation with explicit covariance structure.
+* [statsmodels Nonparametric](https://www.statsmodels.org/stable/nonparametric.html) — KDE / kernel regression.
+* [Quantile Regression](https://www.statsmodels.org/stable/generated/statsmodels.regression.quantile_regression.QuantReg.html) — conditional distribution beyond the mean.
+* [CVXPY](https://www.cvxpy.org/) — constrained / regularized estimation.
+
+A common form:
+
+```text
+argmin_f  empirical_loss(f) + λ · complexity(f)
+```
+
+Interest extends to **non-Euclidean ML**: graph-structured data, spatial manifolds, relational dependence, and learning where distance / neighborhood structure is not well represented by ordinary vector geometry.
+
+Reference models / ideas:
+
+[Graph Neural Networks](https://distill.pub/2021/gnn-intro/) · [Geometric Deep Learning](https://arxiv.org/abs/2104.13478) · [Gaussian Processes on structured domains](https://gaussianprocess.org/gpml/)
+
+---
+
+## Model Training
+
+Trained:
+
+* [BERT](https://arxiv.org/abs/1810.04805)
+* TF-IDF + Logistic Regression
+* Naive Bayes
+* Linear / Logistic Regression
+* Tree ensembles
+* [YOLOv8](https://github.com/ultralytics/ultralytics)
+* CNN-based image models
+
+Canonical references:
+
+[XGBoost](https://xgboost.readthedocs.io/) · [ResNet](https://arxiv.org/abs/1512.03385) · [U-Net](https://arxiv.org/abs/1505.04597) · [ViT](https://arxiv.org/abs/2010.11929) · [Llama](https://github.com/meta-llama/llama) · [Qwen](https://github.com/QwenLM/Qwen) · [CLIP](https://arxiv.org/abs/2103.00020) · [LoRA](https://arxiv.org/abs/2106.09685) · [DPO](https://arxiv.org/abs/2305.18290)
+
+---
+
+## Applications
+
+### Financial Data
+
+`time series` · `event streams` · `cross-sectional panels` · `fundamentals` · `macro`
+
+[NASDAQ TotalView](https://www.nasdaq.com/solutions/nasdaq-totalview) · [SEC EDGAR](https://www.sec.gov/edgar) · [FRED / ALFRED](https://alfred.stlouisfed.org/) · [Kenneth French Data Library](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html) · [Oxford-Man Realized Library](https://realized.oxford-man.ox.ac.uk/)
+
+Methods: state-space models, GARCH, factor models, XGBoost, temporal sequence models, point-in-time feature construction.
+
+### Geospatial Data
+
+`raster` · `vector` · `multispectral` · `SAR` · `climate grids` · `spatiotemporal fields`
+
+[Sentinel-2](https://sentinels.copernicus.eu/web/sentinel/missions/sentinel-2) · [Landsat](https://www.usgs.gov/landsat-missions) · [ERA5](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) · [BigEarthNet](https://bigearth.net/) · [SpaceNet](https://spacenet.ai/datasets/)
+
+Methods: CNN / ViT, XGBoost, Gaussian processes, kriging, spatial kernels, blocked spatial validation.
+
+Tools: [GDAL](https://gdal.org/) · [Rasterio](https://rasterio.readthedocs.io/) · [GeoPandas](https://geopandas.org/) · [xarray](https://docs.xarray.dev/) · [PostGIS](https://postgis.net/)
+
+### Hardware
+
+`video` · `IMU` · `GPS` · `LiDAR` · `device telemetry` · `degradation`
+
+[Waymo Open Dataset](https://waymo.com/open/) · [nuScenes](https://www.nuscenes.org/) · [KITTI](https://www.cvlibs.net/datasets/kitti/) · [NASA C-MAPSS](https://data.nasa.gov/dataset/C-MAPSS-Aircraft-Engine-Simulator-Data/xaut-bemq/about_data)
+
+Methods: YOLO, CNNs, Kalman filtering, tree models, temporal models, survival / degradation modeling.
+
+### Clinical / Sensitive Longitudinal Data
+
+`repeated measures` · `missingness` · `censoring` · `survival` · `privacy constraints`
+
+[MIMIC-IV](https://physionet.org/content/mimiciv/) · [eICU](https://physionet.org/content/eicu-crd/) · [NHANES](https://www.cdc.gov/nchs/nhanes/) · [UK Biobank](https://www.ukbiobank.ac.uk/)
+
+Methods: logistic regression, Cox PH, mixed effects, GEE, XGBoost, doubly robust estimation.
+
+### Language Modeling
+
+`web corpora` · `instruction data` · `preference data` · `synthetic data` · `retrieval`
+
+[Common Crawl](https://commoncrawl.org/) · [The Pile](https://github.com/EleutherAI/the-pile) · [FineWeb](https://huggingface.co/datasets/HuggingFaceFW/fineweb) · [Dolma](https://allenai.github.io/dolma/) · [The Stack](https://huggingface.co/datasets/bigcode/the-stack) · [FLAN](https://github.com/google-research/FLAN)
+
+Training stack:
+
+[PyTorch](https://pytorch.org/) · [Transformers](https://huggingface.co/docs/transformers/) · [FSDP](https://pytorch.org/docs/stable/fsdp.html) · [DeepSpeed](https://www.deepspeed.ai/) · [vLLM](https://docs.vllm.ai/) · [DataTrove](https://github.com/huggingface/datatrove)
+
+---
+
+## Systems
+
+`Polars` · `PyArrow` · `DuckDB` · `Kafka` · `ClickHouse` · `Redis` · `PostgreSQL`
+
+For reproducibility, the relevant object is not only the checkpoint:
+
+```text
+data snapshot
+schema
+feature definition
+training split
+model
+evaluation config
+```
+
+For dependent data, validation follows the structure of the sample:
+
+```text
+temporal → split by time
+longitudinal → split by entity
+spatial → split by geography
+language → remove duplicates / contamination
+```
 # Negative Results 
 
 A collection of things that didn't work. 
