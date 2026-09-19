@@ -2,9 +2,7 @@
 
 ### Serving Cost, Token Usage, and Counterfactual Optimization Across Frontier Models
 
-> **Measured result:** a 12,000-item inference run fell from **40 hours to 6 hours** after introducing batching, caching, and concurrency. The important result is not the 6.7× throughput increase by itself. It is that request-level instrumentation makes the gain explainable: which tokens were paid for, which requests were retried, which context was redundant, which cache entries actually paid back, and which workloads were routed to unnecessarily expensive models.
-
-This project treats inference spend as a systems problem rather than a billing problem.
+This project treats inference spend as a systems problem.
 
 A provider invoice answers one question:
 
